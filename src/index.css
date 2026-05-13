@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+  :root {
+    --background: #ffffff;
+    --foreground: #0f172a;
+    --card: #f8fafc;
+    --border: #e2e8f0;
+  }
+
+  .dark {
+    --background: #020617;
+    --foreground: #f8fafc;
+    --card: #1e293b;
+    --border: #334155;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: var(--transition-theme);
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+
+/* ─── Marquee animation ────────────────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
