@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Logo from "../../assets/Logo.png"
+import Logo from "../../assets/Logo.png";
 
 const footerLinks = {
   Shop: [
@@ -71,7 +71,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0A0A0A] text-white">
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 py-16 lg:py-20">
+      <div className="max-w-7xl mx-auto px-5 lg:px-10 py-9">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Brand column */}
           <div className="col-span-2">
@@ -128,8 +128,8 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/30 text-xs">
-            © {new Date().getFullYear()} Daintree. All rights reserved. Made
-            with ♥ in Sydney, Australia.
+            © {new Date().getFullYear()} Shopsphere All rights reserved. Made
+            with React and Tailwind CSS.
           </p>
 
           {/* Payment icons */}

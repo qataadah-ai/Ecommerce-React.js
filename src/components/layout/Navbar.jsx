@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Logo from "../../assets/Logo.png"
-
+import Logo from "../../assets/Logo.png";
+import { ShoppingCart } from "lucide-react";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Categories", href: "#categories" },
@@ -35,8 +35,8 @@ export default function Navbar() {
             : "bg-white/40 backdrop-blur-md top-8"
         }`}
       >
-        <div className="mx-auto px-5 md:px-8 lg:px-12">
-          <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="mx-auto px-4 md:px-6 lg:px-6">
+          <div className="flex items-center justify-between h-14 md:h-18">
             {/* Logo */}
             <a href="#home" className="flex items-center gap-2.5 shrink-0">
               <img src={Logo} alt="Logo" className="w-30 h-30" />
@@ -57,39 +57,27 @@ export default function Navbar() {
             </nav>
 
             {/* CTA */}
-            <div className="hidden md:flex items-center gap-4">
-              <a href="#shop" className="btn-primary text-sm py-2.5 px-6">
-                Shop Now
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </a>
+            <div className="flex items-center gap-4">
+              <div className="p-1.5 transition-all rounded-2xl hover:bg-[#F6F3EA] cursor-pointer hover:shadow-md">
+                
+                <ShoppingCart />
+              </div>
             </div>
 
             {/* Mobile Hamburger */}
             <button
-              className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg cursor-pointer transition-colors"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
               <span
-                className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+                className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
               />
               <span
-                className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+                className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
               />
               <span
-                className={`block w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
               />
             </button>
           </div>
