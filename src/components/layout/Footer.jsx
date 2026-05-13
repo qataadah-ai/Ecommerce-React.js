@@ -91,7 +91,7 @@ export default function Footer() {
                   key={s.name}
                   href={s.href}
                   aria-label={s.name}
-                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[#C9A96E] flex items-center justify-center transition-colors duration-200"
+                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-[var(--text)] flex items-center justify-center transition-colors duration-200"
                 >
                   <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
                     {s.icon}

@@ -8,14 +8,7 @@
   --transition-theme: all 0.3s ease;
 }
 
-.dark {
-  --background: #020617;
-  --foreground: #f8fafc;
-  --text: #CBD5E1;        
-  --text-muted: #94A3B8;  
 
-  --transition-theme: all 0.3s ease;
-}
 
 body {
   background-color: var(--background);
@@ -108,13 +101,3 @@ body {
   }
 }
 
-@media (max-width: 480px) {
-  .btn-primary,
-  .btn-outline {
-    padding: 8px 14px;
-    font-size: 13px;
-    border-radius: 12px;
-    width: 100%;
-    justify-content: center;
-  }
-}

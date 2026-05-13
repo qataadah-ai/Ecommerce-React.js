@@ -39,7 +39,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-14 md:h-18">
             {/* Logo */}
             <a href="#home" className="flex items-center gap-2.5 shrink-0">
-              <img src={Logo} alt="Logo" className="w-30 h-30" />
+              <img src={Logo} alt="Logo" className="w-25 h-25" />
             </a>
 
             {/* Desktop Nav */}
@@ -48,18 +48,17 @@ export default function Navbar() {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-medium text-[#444] hover:text-black transition-colors duration-200 relative group"
+                  className="text-base font-medium text-[#444] hover:text-black transition-colors duration-200 relative group"
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#C9A96E] group-hover:w-full transition-all duration-300 rounded-full" />
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--text)] group-hover:w-full transition-all duration-300 rounded-full" />
                 </a>
               ))}
             </nav>
 
             {/* CTA */}
-            <div className="flex items-center gap-4">
-              <div className="p-1.5 transition-all rounded-2xl hover:bg-[#F6F3EA] cursor-pointer hover:shadow-md">
-                
+            <div className="flex items-center gap-4 ml-35">
+              <div className="p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
                 <ShoppingCart />
               </div>
             </div>
