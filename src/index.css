@@ -17,6 +17,9 @@ body {
   font-family: "Inter", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+html { scroll-behavior: smooth; }
+
 .text-main {
   color: var(--text);
 }
