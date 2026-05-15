@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Logo from "../../assets/Logo.png";
 import { ShoppingCart } from "lucide-react";
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Categories", href: "#categories" },
+  { label: "Home", href: "/" },
+  { label: "Categories", href: "/" },
   { label: "Shop", href: "#shop" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -38,7 +38,7 @@ export default function Navbar() {
         <div className="mx-auto px-4 md:px-6 lg:px-6">
           <div className="flex items-center justify-between h-14 md:h-18">
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-2.5 shrink-0">
+            <a href="/" className="flex items-center gap-2.5 shrink-0">
               <img src={Logo} alt="Logo" className="w-25 h-25" />
             </a>
 
