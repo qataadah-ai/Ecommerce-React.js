@@ -6,9 +6,9 @@ const categoryImages = {
     "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&auto=format&fit=crop&q=60",
   "women's clothing":
     "https://plus.unsplash.com/premium_photo-1690820318580-04f12f5f0de9?w=600&auto=format&fit=crop&q=60",
-  "jewelery":
-    "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&auto=format&fit=crop&q=60",
-  "electronics":
+  jewelery:
+    "https://plus.unsplash.com/premium_photo-1681276170291-27698ccc0a8e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8andlbGxlcnklMjBwaG90b2dyYXBoeXxlbnwwfHwwfHx8MA%3D%3D",
+  electronics:
     "https://plus.unsplash.com/premium_photo-1683121716061-3faddf4dc504?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGVsZWN0cm9uaWN8ZW58MHx8MHx8fDA%3D",
 };
 
@@ -43,12 +43,13 @@ export default function Category() {
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Shop by Category
-            </h2>
-            <p className="text-muted max-w-md">
+              <p className="section-label">
               Explore our curated collections across various styles and needs.
             </p>
+            <h2 className="section-title">
+              Shop by Category
+            </h2>
+          
           </div>
         </div>
 
