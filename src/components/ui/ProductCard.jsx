@@ -1,5 +1,4 @@
-import React from "react";
-
+import { ShoppingCart } from "lucide-react";
 export default function ProductCard({ product }) {
   return <>
 
@@ -17,8 +16,8 @@ export default function ProductCard({ product }) {
             </h3>
             <p className="text-black/80 font-bold">${product.price}</p>
              <div className="duration-500">
-                <button className="bg-black text-white px-4 py-2 cursor-pointer hover:-translate-y-1 transition-all mt-2 rounded-full text-xs font-bold uppercase tracking-widest">
-                Add to cart
+                <button className="bg-black flex items-center justify-center gap-2 text-white px-4 py-2 cursor-pointer hover:-translate-y-1 transition-all mt-2 rounded-full text-xs font-bold uppercase tracking-widest">
+                <p>Add to cart</p> <ShoppingCart />
                 </button>
               </div>
           </div>

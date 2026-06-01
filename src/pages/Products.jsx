@@ -28,7 +28,7 @@ export default function Products() {
   }
 
   return (
-    <section className="py-20 px-5 md:px-8 max-w-7xl mx-auto">
+    <section className="py-20 px-5 md:px-8 max-w-7xl mx-auto min-h-screen">
       <h1 className="text-4xl font-bold capitalize mb-12 border-l-4 border-black pl-6">
         {category.replace(/-/g, " ")}
       </h1>

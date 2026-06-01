@@ -43,13 +43,10 @@ export default function Category() {
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex items-end justify-between mb-12">
           <div>
-              <p className="section-label">
+            <p className="section-label">
               Explore our curated collections across various styles and needs.
             </p>
-            <h2 className="section-title">
-              Shop by Category
-            </h2>
-          
+            <h2 className="section-title">Shop by Category</h2>
           </div>
         </div>
 
@@ -57,7 +54,10 @@ export default function Category() {
           {categories.map((cat) => (
             <div
               key={cat}
-              onClick={() => navigate(`/products/${cat.replace(/\s+/g, "-")}`)}
+              onClick={() => {
+                navigate(`/products/${cat.replace(/\s+/g, "-")}`);
+                window.scrollTo(0, 0);
+              }}
               className="group relative h-64 md:h-80 rounded-3xl overflow-hidden bg-gray-100 cursor-pointer transition-all duration-700 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)]"
             >
               {/* Background Image */}

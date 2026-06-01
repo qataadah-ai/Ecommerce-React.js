@@ -2,29 +2,10 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 
 const footerLinks = {
-  Shop: [
-    "Women's Fashion",
-    "Men's Collection",
-    "Accessories",
-    "Footwear",
-    "New Arrivals",
-    "Sale",
-  ],
-  Company: ["About Us", "Our Story", "Careers", "Press", "Sustainability"],
-  Support: [
-    "Contact Us",
-    "FAQ",
-    "Shipping Info",
-    "Returns & Exchanges",
-    "Size Guide",
-    "Track Order",
-  ],
-  Legal: [
-    "Privacy Policy",
-    "Terms of Service",
-    "Cookie Policy",
-    "Accessibility",
-  ],
+  Shop: ["Women's Fashion", "Men's Collection", "Electronics", "Jwellery"],
+  Company: ["About Us", "Careers", "Sustainability"],
+  Support: ["Contact Us", "FAQ", "Returns & Exchanges"],
+  Legal: ["Privacy Policy", "Terms of Service"],
 };
 
 const socials = [

@@ -9,7 +9,7 @@ const products = [
     reviews: 342,
     badge: "Best Seller",
     image:
-      "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&q=80",
+      "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dCUyMHNoaXJ0c3xlbnwwfHwwfHx8MA%3D%3D",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const products = [
     reviews: 218,
     badge: "New",
     image:
-      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2xvdGhlc3xlbnwwfHwwfHx8MA%3D%3D",
+      "https://images.unsplash.com/photo-1679156271456-d6068c543ee7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8andlbGxlcnl8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const products = [
     reviews: 561,
     badge: "Top Rated",
     image:
-      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80",
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGVsZWN0cm9uaWN8ZW58MHx8MHx8fDA%3D",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const products = [
     reviews: 124,
     badge: "Limited",
     image:
-      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&q=80",
+      "https://images.unsplash.com/photo-1584998316204-3b1e3b1895ae?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdvbWVucyUyMGNsb3RoaW5nfGVufDB8fDB8fHww",
   },
 ];
 
