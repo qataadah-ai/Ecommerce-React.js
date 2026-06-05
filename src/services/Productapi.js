@@ -21,3 +21,7 @@ export const fetchCategories = () => {
 export const fetchProductsByCategory = (category) => {
   return fetchData(`/products/category/${category}`);
 };
+
+export const fetchProductById = (id) => {
+  return fetchData(`/products/${id}`);
+};

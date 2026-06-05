@@ -3,6 +3,7 @@ import Layout from './layout';
 import Home from './pages/Home';
 import Cart from './pages/cart';
 import Products from './pages/Products';
+import Details from './pages/Details';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="cart" element={<Cart />} />
           <Route path="products/:category" element={<Products />} />
-          {/* Add more routes here as needed */}
+          <Route path="/details/:id" element={<Details/>} />
         </Route>
       </Routes>
     </Router>

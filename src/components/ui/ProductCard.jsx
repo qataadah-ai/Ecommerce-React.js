@@ -1,8 +1,10 @@
 import { ShoppingCart } from "lucide-react";
+import { Link } from "react-router-dom";
 export default function ProductCard({ product }) {
   return <>
 
-  <div key={product.id} className="group cursor-pointer">
+<Link to={`/details/${product.id}`}>
+  <div onClick={()=> window.scrollTo(0, 0)} key={product.id} className="group cursor-pointer">
             <div className="relative aspect-3/4 rounded-2xl overflow-hidden bg-[#f9f9f9] mb-4 shadow-sm group-hover:shadow-xl transition-all duration-500">
               <img
                 src={product.image}
@@ -21,5 +23,6 @@ export default function ProductCard({ product }) {
                 </button>
               </div>
           </div>
+          </Link>
   </>;
 }
