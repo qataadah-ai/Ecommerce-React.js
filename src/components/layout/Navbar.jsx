@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 import { ShoppingCart } from "lucide-react";
 const navLinks = [
@@ -57,12 +58,13 @@ export default function Navbar() {
             </nav>
 
             {/* CTA */}
+            <Link to="/cart">
             <div className="flex items-center gap-4 ml-35">
               <div className="p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
                 <ShoppingCart />
               </div>
             </div>
-
+</Link>
             {/* Mobile Hamburger */}
             <button
               className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg cursor-pointer transition-colors"
@@ -87,6 +89,7 @@ export default function Navbar() {
               menuOpen ? "max-h-80 pb-5" : "max-h-0"
             }`}
           >
+            
             <nav className="flex flex-col gap-1 pt-2 border-t border-gray-100">
               {navLinks.map((link) => (
                 <a

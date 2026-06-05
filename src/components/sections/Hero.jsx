@@ -1,3 +1,4 @@
+import HomeImage from "../../assets/home-image.avif"
 const trustBadges = [
   {
     icon: (
@@ -127,7 +128,7 @@ export default function Hero() {
               {/* Image card */}
               <div className="relative rounded-[2rem] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.15)] aspect-[4/5]">
                 <img
-                  src="https://images.unsplash.com/photo-1625698311031-f0dd15be5144?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNsb3RoaW5nJTIwc3RvcmV8ZW58MHx8MHx8fDA%3D"
+                  src={HomeImage}
                   alt="Daintree Premium Collection"
                   className="w-full h-full object-cover"
                 />

@@ -97,7 +97,7 @@ export default function Details() {
                 <button 
                   key={size}
                   onClick={() => setSelectedSize(size)}
-                  className={`w-12 h-12 rounded-full font-bold transition-all duration-300 flex items-center justify-center border-2 
+                  className={`w-12 h-12 rounded-full font-bold transition-all duration-300 cursor-pointer flex items-center justify-center border-2 
                     ${selectedSize === size 
                       ? 'bg-black text-white border-black scale-105 shadow-md' 
                       : 'bg-white text-gray-600 border-gray-200 hover:border-black hover:text-black'}`}
@@ -127,7 +127,7 @@ export default function Details() {
             </div>
 
             {/* Add to Cart Button */}
-            <button className="flex-1 bg-black text-white px-6 py-3.5 rounded-full font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 transition-all duration-300 whitespace-nowrap">
+            <button className="flex-1 bg-black text-white px-6 py-3.5 rounded-full font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 transition-all duration-300 whitespace-nowrap cursor-pointer">
               <span className="text-sm">Add to Cart</span>
               <ShoppingCart size={18} />
             </button>
