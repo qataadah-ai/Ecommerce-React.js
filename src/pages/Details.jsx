@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { fetchProductById } from '../services/Productapi';
+import {useDispatch} from "react-redux"
+import { addToCart, addToast } from '../redux/feature/addToCartSlice';
 import { ShoppingCart, Star, Minus, Plus, ArrowLeft } from 'lucide-react';
 
 export default function Details() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
@@ -44,6 +47,12 @@ export default function Details() {
       </div>
     );
   }
+
+ const AddtoCart = ()=>{
+  dispatch(addToCart({...product, quantity, size: selectedSize}));
+  dispatch(addToast());
+  console.log("Added to cart", product)
+ }
 
   return (
     <section className="py-8 px-5 md:px-8 max-w-6xl mx-auto min-h-screen">
@@ -127,7 +136,7 @@ export default function Details() {
             </div>
 
             {/* Add to Cart Button */}
-            <button className="flex-1 bg-black text-white px-6 py-3.5 rounded-full font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 transition-all duration-300 whitespace-nowrap cursor-pointer">
+            <button onClick={AddtoCart} className="flex-1 bg-black text-white px-6 py-3.5 rounded-full font-bold uppercase tracking-widest flex items-center justify-center gap-2 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/10 transition-all duration-300 whitespace-nowrap cursor-pointer">
               <span className="text-sm">Add to Cart</span>
               <ShoppingCart size={18} />
             </button>

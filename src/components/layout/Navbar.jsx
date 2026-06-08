@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import {Link} from "react-router-dom";
+import { useSelector } from "react-redux";
 import Logo from "../../assets/Logo.png";
 import { ShoppingCart } from "lucide-react";
 const navLinks = [
@@ -13,6 +14,8 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartCount = cartItems.length;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -60,8 +63,13 @@ export default function Navbar() {
             {/* CTA */}
             <Link to="/cart">
             <div className="flex items-center gap-4 ml-35">
-              <div className="p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
+              <div className="relative p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
                 <ShoppingCart />
+                {cartCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-black text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                    {cartCount}
+                  </span>
+                )}
               </div>
             </div>
 </Link>
