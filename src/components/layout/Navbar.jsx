@@ -59,35 +59,37 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* CTA */}
-            <Link to="/cart">
-              <div className="flex items-center gap-4 ml-35">
-                <div className="relative p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
-                  <ShoppingCart />
-                  {cartCount > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-black text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
-                      {cartCount}
-                    </span>
-                  )}
-                </div>
-              </div>
-            </Link>
             {/* Mobile Hamburger */}
-            <button
-              className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg cursor-pointer transition-colors"
-              onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
-            >
-              <span
-                className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-              />
-              <span
-                className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
-              />
-              <span
-                className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-              />
-            </button>
+            <div className="flex items-center gap-4">
+              <Link to="/cart">
+                <div className="flex items-center gap-4 ml-35">
+                  <div className="relative p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
+                    <ShoppingCart />
+                    {cartCount > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-black text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                        {cartCount}
+                      </span>
+                    )}
+                  </div>
+                </div>
+              </Link>
+
+              <button
+                className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg cursor-pointer transition-colors"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Toggle menu"
+              >
+                <span
+                  className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+                />
+                <span
+                  className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
+                />
+                <span
+                  className={` w-6 h-0.5 bg-black transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+                />
+              </button>
+            </div>
           </div>
 
           {/* Mobile Menu */}

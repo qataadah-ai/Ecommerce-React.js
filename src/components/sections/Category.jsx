@@ -51,7 +51,7 @@ export default function Category() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {categories.map((cat) => (
+         {[...categories].reverse().map((cat) => (
             <div
               key={cat}
               onClick={() => {
