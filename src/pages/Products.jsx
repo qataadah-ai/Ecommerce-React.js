@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { fetchProductsByCategory } from "../services/Productapi";
 import ProductCard from "../components/ui/ProductCard";
+import LoadingSpinner from "../components/ui/LoadingSpinner";
 export default function Products() {
   const { category } = useParams();
   const [products, setProducts] = useState([]);
@@ -20,11 +21,7 @@ export default function Products() {
   }, [category]);
 
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-black shadow-2xl"></div>
-      </div>
-    );
+    return <LoadingSpinner />;
   }
 
   return (
@@ -35,7 +32,7 @@ export default function Products() {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
         {products.map((product) => (
-         <ProductCard key={product.id} product={product}/>
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
     </section>

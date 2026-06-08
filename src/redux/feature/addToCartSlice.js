@@ -15,7 +15,7 @@ const addToCartSlice = createSlice({
         // If product already exists, increment quantity
         existingItem.quantity = (existingItem.quantity || 1) + 1;
       } else {
-        // If product is new, add it with quantity 1
+      
         state.items.push({ ...action.payload, quantity: 1 });
       }
       
@@ -28,10 +28,10 @@ const addToCartSlice = createSlice({
      addToast: () => {
       toast.success("Added To Cart", {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: false,
-        pauseOnHover: true,
+        pauseOnHover: false,
         draggable: true,
         progress: undefined,
         theme: "light",
@@ -40,10 +40,10 @@ const addToCartSlice = createSlice({
     removeToast: () => {
       toast.error("Removed from Cart", {
         position: "top-center",
-        autoClose: 2000,
+        autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: false,
-        pauseOnHover: true,
+        pauseOnHover: false,
         draggable: true,
         progress: undefined,
         theme: "dark",

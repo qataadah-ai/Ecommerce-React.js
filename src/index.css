@@ -41,7 +41,9 @@ html { scroll-behavior: smooth; }
 }
 .btn-primary {
   display: inline-flex;
+  text-align: center;
   align-items: center;
+  justify-content: center;
   gap: 6px;
   padding: 12px 24px;
   border-radius: 16px;
@@ -122,3 +124,17 @@ html { scroll-behavior: smooth; }
   line-height: 1.2;
 }
 
+/* Mobile styling */
+@media (max-width: 600px) {
+  .Toastify__toast {
+    font-size: 12px !important;
+    padding: 8px 12px !important;
+    min-height: 60px !important;
+    margin-top: 10px !important;
+  }
+
+  .Toastify__toast-container {
+    width: 90vw !important;
+    left: 5vw !important;
+  }
+}

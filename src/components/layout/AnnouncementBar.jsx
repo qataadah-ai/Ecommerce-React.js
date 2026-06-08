@@ -1,13 +1,13 @@
 const messages = [
-  '✦ Free Shipping on all orders over $75',
-  '✦ New Season Collection — Shop Now',
-  '✦ Easy 30-Day Returns',
-  '✦ Secure Checkout Guaranteed',
-  '✦ Free Shipping on all orders over $75',
-  '✦ New Season Collection — Shop Now',
-  '✦ Easy 30-Day Returns',
-  '✦ Secure Checkout Guaranteed',
-]
+  "✦ Free Shipping on all orders over $75",
+  "✦ New Season Collection — Shop Now",
+  "✦ Easy 30-Day Returns",
+  "✦ Secure Checkout Guaranteed",
+  "✦ Free Shipping on all orders over $75",
+  "✦ New Season Collection — Shop Now",
+  "✦ Easy 30-Day Returns",
+  "✦ Secure Checkout Guaranteed",
+];
 
 export default function AnnouncementBar() {
   return (
@@ -23,5 +23,5 @@ export default function AnnouncementBar() {
         ))}
       </div>
     </div>
-  )
+  );
 }

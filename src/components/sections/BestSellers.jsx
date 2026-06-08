@@ -46,38 +46,24 @@ const products = [
   },
 ];
 
-
 export default function BestSellers() {
   return (
     <section
       id="bestSellers"
       className="relative min-h-screen flex  overflow-hidden bg-[#F8F8F8]"
     >
-     <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 w-full py-12">
-        
-          <div>
-              <p className="section-label">
-              Handpicked just for you
-            </p>
-            <h2 className="section-title">
-              Best Sellers
-            </h2>
-      
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
-     {
-        products.map((products)=>{
-            return(
-                <ProductCard key={products.id} product={products}/>
-            )
-        })
-     }
+      <div className="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 w-full py-12">
+        <div>
+          <p className="section-label">Handpicked just for you</p>
+          <h2 className="section-title">Best Sellers</h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-10">
+            {products.map((products) => {
+              return <ProductCard key={products.id} product={products} />;
+            })}
+          </div>
+        </div>
       </div>
-        </div>
-        </div>
-
-
-
     </section>
   );
 }
-

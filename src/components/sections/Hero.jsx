@@ -1,4 +1,4 @@
-import HomeImage from "../../assets/home-image.avif"
+import HomeImage from "../../assets/home-image.avif";
 const trustBadges = [
   {
     icon: (

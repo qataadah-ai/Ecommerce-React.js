@@ -39,7 +39,7 @@ export default function Category() {
   }
 
   return (
-    <section id="categories" className="py-20 bg-white">
+    <section id="shop" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-8">
         <div className="flex items-end justify-between mb-12">
           <div>

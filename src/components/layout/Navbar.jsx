@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Logo from "../../assets/Logo.png";
 import { ShoppingCart } from "lucide-react";
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Categories", href: "/" },
   { label: "Shop", href: "#shop" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -62,17 +61,17 @@ export default function Navbar() {
 
             {/* CTA */}
             <Link to="/cart">
-            <div className="flex items-center gap-4 ml-35">
-              <div className="relative p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
-                <ShoppingCart />
-                {cartCount > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-black text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
-                    {cartCount}
-                  </span>
-                )}
+              <div className="flex items-center gap-4 ml-35">
+                <div className="relative p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
+                  <ShoppingCart />
+                  {cartCount > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-black text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                      {cartCount}
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
-</Link>
+            </Link>
             {/* Mobile Hamburger */}
             <button
               className="md:hidden flex flex-col gap-1.5 p-2 rounded-lg cursor-pointer transition-colors"
@@ -97,7 +96,6 @@ export default function Navbar() {
               menuOpen ? "max-h-80 pb-5" : "max-h-0"
             }`}
           >
-            
             <nav className="flex flex-col gap-1 pt-2 border-t border-gray-100">
               {navLinks.map((link) => (
                 <a
