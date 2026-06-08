@@ -126,13 +126,13 @@ export default function Hero() {
           <div className="order-1 md:order-2 relative flex justify-center justify-items-start">
             <div className="relative w-full max-w-md lg:max-w-lg">
               {/* Image card */}
-              <div className="relative rounded-[2rem] overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.15)] aspect-[4/5]">
+              <div className="relative rounded-4xl overflow-hidden shadow-[0_32px_80px_rgba(0,0,0,0.15)] aspect-4/5">
                 <img
                   src={HomeImage}
                   alt="Daintree Premium Collection"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent" />
               </div>
 
               {/* Floating badge */}
