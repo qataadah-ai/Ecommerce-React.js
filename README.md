@@ -1,16 +1,55 @@
-# React + Vite
+# 🛒 E-Commerce Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive e-commerce web application built with React,Tailwind CSS and Redux Toolkit, and Fake Store API. The project provides a complete shopping experience, allowing users to browse products, view product details,and manage their shopping cart through a centralized Redux state management system.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://ecommerce-website-red-pi.vercel.app/
 
-## React Compiler
+## 📖 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project was created to practice and demonstrate modern frontend development concepts using React and Redux Toolkit. The application consumes product data from Fake Store API and delivers a clean, user-friendly shopping experience with responsive design for desktop and mobile devices.
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Product listing with dynamic data fetching
+* Product details page
+* Category-based product browsing
+* Shopping cart powered by Redux Toolkit
+* Add to cart functionality
+* Remove items from cart
+* Cart total calculation
+* Responsive design for all screen sizes
+* Client-side routing with React Router
+* Loading and error handling states
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React.js
+* React Router DOM
+* Redux Toolkit
+* React Redux
+* Tailwind CSS
+
+### API
+
+* Fake Store API
+
+### Deployment
+
+* Vercel
+
+## 🔮 Future Improvements
+
+* User authentication
+* Wishlist functionality
+* Product filtering and sorting
+* Checkout flow
+* Order history
+* Backend integration
+* Payment gateway integration
+
+
+If you found this project useful, feel free to ⭐ the repository.
