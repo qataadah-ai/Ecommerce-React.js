@@ -8,6 +8,7 @@ import Products from './pages/Products';
 import Details from './pages/Details';
 
 function App() {
+  
   return (
     <Router>
       <ToastContainer />

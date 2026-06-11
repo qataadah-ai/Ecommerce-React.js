@@ -4,10 +4,10 @@ import { useSelector } from "react-redux";
 import Logo from "../../assets/Logo.png";
 import { ShoppingCart } from "lucide-react";
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Shop", href: "#shop" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", to: "/" },
+  { label: "Shop", to: "/#shop" },
+  { label: "About", to: "/#about" },
+  { label: "Contact", to: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -48,21 +48,24 @@ export default function Navbar() {
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.to}
                   className="text-base font-medium text-[#444] hover:text-black transition-colors duration-200 relative group"
                 >
                   {link.label}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--text)] group-hover:w-full transition-all duration-300 rounded-full" />
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* Mobile Hamburger */}
             <div className="flex items-center gap-4">
               <Link to="/cart">
-                <div className="flex items-center gap-4 ml-35">
+                <div
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="flex items-center gap-4 ml-35"
+                >
                   <div className="relative p-1.5 transition-all rounded-2xl cursor-pointer hover:shadow-md">
                     <ShoppingCart />
                     {cartCount > 0 && (
@@ -100,21 +103,22 @@ export default function Navbar() {
           >
             <nav className="flex flex-col gap-1 pt-2 border-t border-gray-100">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.to}
                   onClick={() => setMenuOpen(false)}
                   className="py-2.5 px-3 text-sm font-medium text-[#444] hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#shop"
+              <Link
+                to="/#shop"
                 className="btn-primary text-sm mt-3 justify-center"
+                onClick={() => setMenuOpen(false)}
               >
                 Shop Now →
-              </a>
+              </Link>
             </nav>
           </div>
         </div>

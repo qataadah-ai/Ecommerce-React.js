@@ -1,12 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart, removeToast } from "../redux/feature/addToCartSlice";
-import { Trash2, Plus, Minus, ShoppingCart } from "lucide-react";
+import {
+  removeFromCart,
+  increaseQuantity,
+  decreaseQuantity,
+} from "../redux/feature/addToCartSlice";
+import { Trash2, Plus, Minus } from "lucide-react";
 
 export default function cart() {
   const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
+  const itemsLength = cartItems.length;
   const dispatch = useDispatch();
 
   const subtotal = cartItems.reduce((total, item) => {
@@ -18,8 +23,16 @@ export default function cart() {
 
   const removeItem = (id) => {
     dispatch(removeFromCart(id));
-    dispatch(removeToast());
   };
+
+  const incrementItem = (id) => {
+    dispatch(increaseQuantity(id));
+  };
+
+  const decrementItem = (id) => {
+    dispatch(decreaseQuantity(id));
+  };
+
   return (
     <section className="min-h-screen px-5 md:px-8 py-20 max-w-7xl mx-auto">
       {/* Header */}
@@ -27,7 +40,7 @@ export default function cart() {
         <h1 className="text-4xl font-bold border-l-4 border-black pl-6 mb-2">
           Shopping Cart
         </h1>
-        <p className="text-gray-600 ml-6">3 items in your cart</p>
+        <p className="text-gray-600 ml-6">{itemsLength} items in your cart</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -43,29 +56,43 @@ export default function cart() {
                 <div className="shrink-0 w-24 h-24 rounded-xl overflow-hidden bg-white shadow-sm">
                   <img
                     src={item.image}
-                    alt={item.title}
                     className="w-full h-full object-contain p-2"
                   />
                 </div>
                 <div className="grow">
                   <h3 className="font-bold text-sm line-clamp-2 mb-2">
-                    Premium Wireless Headphones
+                    {item.title}
                   </h3>
                   <p className="text-black font-bold mb-3">
                     ${item.price.toFixed(2)}
                   </p>
 
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="flex items-center bg-white rounded-full w-fit px-3 py-2 shadow-sm px-2 font-bold text-sm min-w-[2rem] text-center">
-                      Quantity: {item.quantity}
-                    </span>
-                    <span className="flex items-center bg-white rounded-full w-fit px-3 py-2 shadow-sm px-2 font-bold text-sm min-w-[2rem] text-center">
+                    <div className="flex items-center bg-white rounded-full shadow-sm font-bold text-sm min-w-[2rem]">
+                      <button
+                        type="button"
+                        onClick={() => decrementItem(item.id)}
+                        className="p-2 rounded-l-full hover:bg-gray-100 transition-colors duration-200"
+                      >
+                        <Minus />
+                      </button>
+                      <span className="px-3 py-2 min-w-[2rem] text-center">
+                        {item.quantity}
+                      </span>
+                      <button
+                        type="button"
+                        onClick={() => incrementItem(item.id)}
+                        className="p-2 rounded-r-full hover:bg-gray-100 transition-colors duration-200"
+                      >
+                        <Plus />
+                      </button>
+                    </div>
+                    <span className="flex items-center bg-white rounded-full w-fit px-3 py-2 shadow-sm font-bold text-sm min-w-[2rem] text-center">
                       Size: {item.size}
                     </span>
                   </div>
                 </div>
                 <div className="flex flex-col items-end justify-between">
-                  <p className="font-bold text-lg">${item.price.toFixed(2)}</p>
                   <button
                     onClick={() => removeItem(item.id)}
                     className="text-red-500 hover:text-red-700 hover:bg-red-50 p-2 rounded-full transition-all duration-300"
